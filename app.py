@@ -4,7 +4,7 @@ import streamlit as st
 pickle_in = open('rfmodel.pkl', 'rb')
 clf = pickle.load(pickle_in)
 
-@st.cache()
+@st.cache_resource()
 
 
 def make_prediction(Age,EstSalary,Gender):
